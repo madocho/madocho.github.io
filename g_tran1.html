@@ -12,6 +12,12 @@
       var audio2 = new Audio("https://papago.naver.com/apis/tts/1.9.1_49620-aece78b191dbc340c8993245970a9f8d-1531543828596");
       var audio3 = new Audio("https://papago.naver.com/apis/tts/1.9.1_377-4c86f7253e1eca6853120038f40f9114-1531814677155");
       var audio4 = new Audio("https://papago.naver.com/apis/tts/1.9.1_19575-a4d54b138660d980a2c405f30af01535-1531814772479");
+      var audio5 = new Audio("https://papago.naver.com/apis/tts/1.9.1_58924-ccd420a27a503c84c1685ee33fd4aacf-1531816101762");
+      var audio6 = new Audio("https://papago.naver.com/apis/tts/1.9.1_59457-193dcf2d6a917e190e6958982d14c8be-1531816199023");
+      var audio7 = new Audio("https://papago.naver.com/apis/tts/1.9.1_6526-06a9159752bb9dbcb7cee1fd3c5f8056-1531816309437");
+      var audio8 = new Audio("https://papago.naver.com/apis/tts/1.9.1_20460-ac5efb2b340eadc0218375a720284b70-1531816405994");
+      var audio9 = new Audio("https://papago.naver.com/apis/tts/1.9.1_18572-e69c190396c3598ec3561ce96404f75b-1531816545933");
+    //  var audio = new Audio("");
   </script>
 </head>
 <body>
@@ -19,14 +25,16 @@
 <div class="container">
   <h2>리얼 일본어 여행 회화</h2>
   <p>상황별 회화 모음</p>
-  <div class="panel-group">
+  <div class="panel-group" id="accordion">
     <div class="panel panel-info">
+
+      <!-- C1 기본 회화 -->
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1">기본 회화</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">기본 회화</a>
         </h4>
       </div>
-      <div id="collapse1" class="panel-collapse collapse">
+      <div id="collapse1" class="panel-collapse collapse in">
         <ul class="list-group">
           <li class="list-group-item">안녕하세요. おはようございます。 <button onclick="audio1.play()"><i class="fas fa-play"></i></button><br/>
             <font color="#CCC">오하요우고자이마쓰</font>
@@ -37,9 +45,10 @@
         </ul>
       </div>
 
+      <!-- C2 기본 교통 -->
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse2">교통</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">교통</a>
         </h4>
       </div>
       <div id="collapse2" class="panel-collapse collapse">
@@ -52,6 +61,44 @@
           </li>
         </ul>
       </div>
+
+      <!-- C3 호텔 -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">호텔에서</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">짐을 맡겨도 괜찮습니까? 荷物を預けても大丈夫ですか。 <button onclick="audio5.play()"><i class="fas fa-play"></i></button><br/>
+            <font color="#CCC">니모츠오 아즈케테모 다이조오부데스카</font>
+          </li>
+          <li class="list-group-item">택시를 불러주세요. タクシーを呼んでください。 <button onclick="audio6.play()"><i class="fas fa-play"></i></button><br/>
+            <font color="#CCC">타쿠시이오 욘데쿠다사이</font>
+          </li>
+        </ul>
+      </div>
+
+      <!-- C4 식당 -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">식당에서</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">이 가게의 추천 메뉴는 무엇입니까? この店のおすすめメニューは何ですか。 <button onclick="audio7.play()"><i class="fas fa-play"></i></button><br/>
+            <font color="#CCC">코노 미세노 오스스메메뉴우와 난데스카</font>
+          </li>
+          <li class="list-group-item">한 그릇 더 주세요. 一杯もっとください。 <button onclick="audio8.play()"><i class="fas fa-play"></i></button><br/>
+            <font color="#CCC">잇파이 못토쿠다사이</font>
+          </li>
+          <li class="list-group-item">계산 부탁드립니다. 計算お願いします。 <button onclick="audio9.play()"><i class="fas fa-play"></i></button><br/>
+            <font color="#CCC">케에산오네가이시마스</font>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>
